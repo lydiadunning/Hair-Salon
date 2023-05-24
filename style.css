@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+:root {
+  --background: hsl(30, 25%, 5%);
+  --high-contrast: hsl(20, 41%, 90%);
+  --high-contrast-rgb: #F0E2DB; /* this value is used in SVG files */
+  --mid-contrast: hsl(210, 30%, 20%);
+  --link-unclicked: hsl(211, 55%, 75%);
+  --link-clicked: hsl(211, 33%, 60%);
+  --link-hover: hsl(20, 100%, 80%);
+  font-family: serif;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font: inherit;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--high-contrast);
+}
+
+header, nav, header div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+nav {
+  width: max(420px, 60%);
+  display: none;
+}
+
+.burger {
+  border-radius: 5px;
+  border: 1px dotted var(--high-contrast);
+  font-size: 2rem;
+  padding: 0 .6rem;
+  margin-right: 1rem;
+}
+
+.logo {
+  padding-right: 12ch; 
+  padding-left: 1rem;
+  font-family: 'Fredericka the Great', cursive;
+}
+
+h3, button {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+button {
+  background-color: var(--background);
+  color: var(--high-contrast);
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+button:before{
+  content: '- ';
+}
+
+button:hover {
+  color: var(--link-hover);
+}
+
+.contrast {
+  background-color: var(--high-contrast);
+  color: var(--background);
+}
+
+button.contrast:hover {
+  background-color: var(--link-hover);
+  color: var(--background)
+}
+
+main {
+  background-image: url("close-up-portrait-cute-smiling-boy-sitting-chair-with-black-salon-cape-waits-hairdresser.jpg");
+  padding: 20% 1rem 10% 10%;
+  background-size: cover;
+  color: var(--high-contrast);
+
+}
+
+h1 {
+  font-size: 4rem;
+  width: max(30%, 20rem);
+  padding-bottom: 2rem;
+}
+
+
+main .special {
+  width: max(20%, 14rem);
+  padding: 1rem;
+  padding-top: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+em {
+  font-weight: 900;
+}
+
+.group {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  gap: 1rem;
+  margin: 10% 10% 10% 10%;
+  max-width: 100vw;
+  text-align: center;
+}
+
+.group img {
+  width: 100%;
+}
+
+.offer {
+  background-image: url('child-stylish-clothes.jpg');
+  background-size: cover;
+  padding: 10% 60% 0 10%;
+  aspect-ratio: 6/3;
+}
+
+.cuts img {
+  height: 4rem;
+}
+
+.cuts h3 {
+  margin: 1rem 0;
+}
+
+.video-content {
+  margin: 0;
+  padding: 2rem 10% 2rem 10%;
+  background: var(--mid-contrast);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video-content div {
+  width: 50%;
+}
+
+.video-look {
+  width: 50%;
+  aspect-ratio: 3/2;
+  display: inline-block;
+  background-image: url("wepik-export-202305190631417aw9.jpeg");
+  background-size: cover;
+  
+}
+
+.video-look div {
+  margin: auto;
+  background-color: var(--mid-contrast);
+  border: 2px double  var(--high-contrast);
+  border-radius: 5rem;
+  width: 20%;
+  aspect-ratio: 1/1;
+  text-align: center;
+  font-size: 5vw;
+  padding-left: .3rem;
+}
+
+.video-look, .video-look div {
+  display: flex;
+  place-content: center;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.overlay {
+  position: relative;
+  top: -2rem;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.hours {
+  text-align: center;
+}
+
+.column * {
+  margin-bottom: 10%;
+}
+
+.lookbook {
+  text-align: center;
+  margin: 5% 0;
+}
+
+.lookbook h2 {
+  margin: 2rem auto 1rem auto;
+}
+
+.lookbook hr {
+  width: 1rem;
+  margin: 0 auto 2rem auto;
+
+}
+
+.masonry {
+  display: flex;
+  flex-flow: column wrap;
+  place-content: space-between;
+  height: 55vw;
+  margin: 0 10%;
+}
+
+.masonry img, .click-here {
+  width: 24vw;
+}
+
+.click-here {
+  background-image: url("wepik-export-20230522191649Ekjt.jpeg");
+  background-size: cover;
+  aspect-ratio: 3 / 2;
+  background-color: var(--mid-contrast);
+}
+
+.click-here a {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  background-color: var(--mid-contrast);
+  opacity: 80%;
+  text-align: center;
+  font-size: 3rem;
+  padding-top: calc(100%/3 - 1.5rem);
+}
+
+.click-here a:hover {
+  background-color: transparent;
+}
+
+footer {
+  background-color: var(--mid-contrast);
+  padding: 1.5% 10%;
+}
+
+footer a {
+  color: var(--link-unclicked);
+}
+
+a {
+  cursor: pointer;
+}
+
+footer a:visited {
+  color: var(--link-clicked);
+}
+
+a:hover, a:focus {
+  color: var(--link-hover);
+}
+
+footer .wrap {
+  display: flex;
+  flex-flow: row wrap;
+  gap: .5rem 1rem;
+  font-size: .85rem;
+  padding-top: 1rem;
+}
+
+@media(max-width: 600px) {
+  header {
+    justify-content: space-between;
+  }
+  main {
+    background-image: none;
+    padding: 0;
+    
+  }
+
+
+  .logo {
+    padding:0 0 0 5%;
+  }
+  .expand {
+    background-image: url("close-up-portrait-cute-smiling-boy-sitting-chair-with-black-salon-cape-waits-hairdresser.jpg");
+    width: 100%;
+    background-size: cover;
+    aspect-ratio: 16/9;
+    padding: 5%;
+  }
+  main .special {
+    width: 90%;
+    margin: 5%;
+    padding: 5% 5% 1% 5%;
+  }
+  .column *{
+    margin-bottom: 5%;
+  }
+  .video-content>div {
+    width: 100%;
+  }
+  .video-look>div {
+    font-size: 11vw;    
+  }
+
+  .video-content {
+    padding: 5%;
+  }
+  .stylists span {
+    display: none;
+  }
+  .stylists section {
+    flex: 1 1 auto;
+    min-width: 28vw;
+  }
+  .offer {
+    padding-left: 5%;
+  }
+  
+  .group {
+    margin: 5%;
+    gap: .5rem;
+  }
+  .masonry {
+    margin: 0 5%;
+    height: 62vw;
+  }
+  .masonry img, .click-here {
+    width: 27vw;
+  }
+  footer {
+    padding: 5%;
+  }
+
+}
+
+@media(min-width: 860px) {
+  .hours {
+    position: relative;
+    float: right;
+    top: -24rem;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+  nav {
+    display: flex;
+  }
+  header, nav {
+    justify-content: space-around;
+  }
+  .burger {
+    display: none;
+  }
+}
